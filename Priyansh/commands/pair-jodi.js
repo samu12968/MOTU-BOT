@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "jodi",
+    name: "jodi2",
     version: "7.3.1",
     hasPermssion: 0,
     credits: " Arun",///don't change my Credit Coz i Edit 
