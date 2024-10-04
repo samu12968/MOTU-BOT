@@ -33,7 +33,7 @@ module.exports.run = async function({ api, event }) {
     const fs = require("fs");
     return api.sendMessage("𝐇𝐄𝐋𝐋𝐎 𝐄𝐕𝐄𝐑𝐘𝐎𝐍𝐄🙋‍♂️", event.threadID, () => api.sendMessage({body:`🌺𝐀𝐀𝐑𝐘𝐀𝐍  𝐁𝐎𝐓🦋🌺 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃«
 
-𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐛𝐲𝐞 𝐌𝐑..𝐀𝐀𝐑𝐘𝐀𝐍 ☘️
+𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐛𝐲𝐞 𝐀𝐀𝐑𝐘𝐀𝐍 𝐒𝐇𝐀𝐑𝐀𝐁𝐈 
 <------------------------------>  
 𝐁𝐎𝐓 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋!!! 
 
@@ -49,7 +49,7 @@ AND FOR ANY REPORT OR CONTACT BOT DEVELOPER
 
 ♻️Facebook: 
 
-https://www.facebook.com/Mr.Aaryan.babu
+https://www.facebook.com/ARYAN.SHARABI.HERE
 
 Youtube Site : https://youtube.com/@aaryanaawara
 
