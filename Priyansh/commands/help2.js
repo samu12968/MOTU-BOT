@@ -15,12 +15,12 @@ module.exports.config = {
 
 module.exports.languages = {
   //"vi": {
-  //	"moduleInfo": "「 %1 」\n%2\n\n❯ Cách sử dụng: %3\n❯ Thuộc nhóm: %4\n❯ Thời gian chờ: %5 giây(s)\n❯ Quyền hạn: %6\n\n» Module code by %7 «",
-  //	"helpList": '[ Hiện tại đang có %1 lệnh có thể sử dụng trên bot này, Sử dụng: "%2help nameCommand" để xem chi tiết cách sử dụng! ]"',
-  //	"user": "Người dùng",
+  //        "moduleInfo": "「 %1 」\n%2\n\n❯ Cách sử dụng: %3\n❯ Thuộc nhóm: %4\n❯ Thời gian chờ: %5 giây(s)\n❯ Quyền hạn: %6\n\n» Module code by %7 «",
+  //        "helpList": '[ Hiện tại đang có %1 lệnh có thể sử dụng trên bot này, Sử dụng: "%2help nameCommand" để xem chi tiết cách sử dụng! ]"',
+  //        "user": "Người dùng",
   //      "adminGroup": "Quản trị viên nhóm",
   //      "adminBot": "Quản trị viên bot"
-//	},
+//        },
   "en": {
     "moduleInfo": "「 %1 」\n%2\n\n❯ Usage: %3\n❯ Category: %4\n❯ Waiting time: %5 seconds(s)\n❯ Permission: %6\n\n» Module code by %7 «",
     "helpList": '[ There are %1 commands on this bot, Use: "%2help nameCommand" to know how to use! ]',
@@ -73,7 +73,7 @@ module.exports. run = function({ api, event, args, getText }) {
     for (let item of returnArray) msg += `『 ${++i} 』${prefix}${item}\n`;
 
 
-    const siu = `╔━━❖❖💠❖❖━━╗\n  𝐀𝐥𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐋𝐢𝐬𝐭\n╚━━❖❖💠❖❖━━╝\n 𝐌𝐚𝐝𝐞 𝐛𝐲𝐞 𝗔𝗮𝗿𝘆𝗮𝗻 𝗦𝗵𝗮𝗿𝗮𝗯𝗶❣️`;
+    const siu = `╔━━❖❖💠❖❖━━╗\n  𝐀𝐥𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐋𝐢𝐬𝐭\n╚━━❖❖💠❖❖━━╝\n 𝐌𝐚𝐝𝐞 𝐛𝐲𝐞 𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧❣️`;
 
  const text = `\nPage (${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)})`;
 
