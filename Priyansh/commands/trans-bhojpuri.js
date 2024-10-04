@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "hindi",
+	name: "bhojpuri",
 	version: "1.0.1",
 	hasPermssion: 0,
 	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
@@ -28,12 +28,12 @@ module.exports.run = async ({ api, event, args }) => {
 		lang = global.config.language;
 	}
   
-	return request(encodeURI(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=hi&dt=t&q=${translateThis}`), (err, response, body) => {
+	return request(encodeURI(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=bho&dt=t&q=${translateThis}`), (err, response, body) => {
 		if (err) return api.sendMessage("An error has occurred!", event.threadID, event.messageID);
 		var retrieve = JSON.parse(body);
 		var text = '';
 		retrieve[0].forEach(item => (item[0]) ? text += item[0] : '');
 		var fromLang = (retrieve[2] === retrieve[8][0][0]) ? retrieve[2] : retrieve[8][0][0]
-		api.sendMessage(` ${text}\n - 🍂🍂 ${fromLang} to 𝐇𝐢𝐧𝐝𝐢🍂🍂`, event.threadID, event.messageID);
+		api.sendMessage(` ${text}\n -🍂🍂 ${fromLang} to 𝐁𝐡𝐨𝐣𝐩𝐮𝐫𝐢🍂`, event.threadID, event.messageID);
 	});
-                                    }
+    }
