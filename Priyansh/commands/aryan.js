@@ -12,7 +12,7 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("ARYAN")==0 || event.body.indexOf("Aryan")==0 || event.body.indexOf("Aaryan")==0 || event.body.indexOf("@𝐌⃞ʀ ‣⃟ ⃝𑁍 ⃝𝐀ɑ͜͡ɽ̬̬̬̬̬̬̬̬̬̬̬̬̬ɣ̽̈ɑ͜͡ƞ̈͢ﮩـﮩـ圓‣⃟𑁍")==0) {
+	if (event.body.indexOf("ARYAN")==0 || event.body.indexOf("Aryan")==0 || event.body.indexOf("Aaryan")==0 || event.body.indexOf("@Aʌʀƴʌŋ SHʌʀʌɓɩ Bʌɗɱʌsʜ")==0) {
 		var msg = {
 				body: "हेलो बेबी मुझे आर्यन बाबू ने बनाया है। 🙂🌍🌸",
 			}
