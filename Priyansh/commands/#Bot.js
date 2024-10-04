@@ -69,7 +69,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
    };
   
    if ((event.body.toLowerCase() == "admin") || (event.body.toLowerCase() == "bot owner")) {
-     return api.sendMessage("‎🍁𝐎𝐖𝐍𝐄𝐑🍁:𝄟  𝆺𝅥⃝🧸𝐌𝐑.𝐀𝐀𝐑𝐘𝐀𝐍 𝐁𝐀𝐁𝐔 𝄟\n 𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 ⚡ 𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧⚡. 𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 :- https://www.facebook.com/Mr.Aaryan.babu\nContact Him on WhatsApp :- +919664945791", threadID);
+     return api.sendMessage("‎🍁𝐎𝐖𝐍𝐄𝐑🍁:𝄟  𝆺𝅥⃝🧸𝐀𝐀𝐑𝐘𝐀𝐍 𝐒𝐇𝐀𝐑𝐀𝐁𝐈  𝄟\n 𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 ⚡ 𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧⚡. 𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 :- https://www.facebook.com/ARYAN.SHARABI.HERE\nContact Him on WhatsApp :- +919664945791", threadID);
    };
 
    if ((event.body.toLowerCase() == "tumhe kisne banaya hai") || (event.body.toLowerCase() == "tumko banaya kisne")) {
@@ -153,7 +153,7 @@ if ((event.body.toLowerCase() == "aaryan") || (event.body.toLowerCase() == "arya
    };
 
    if ((event.body.toLowerCase() == "kese ho") || (event.body.toLowerCase() == "kaise ho") || (event.body.toLowerCase() == "kese ho ji") || (event.body.toLowerCase() == "how are you") || (event.body.toLowerCase() == "kaisi ho")) {
-     return api.sendMessage("💐𝐌𝐚𝐢 𝐓𝐚𝐛𝐡𝐢 𝐀𝐜𝐜𝐡𝐚 𝐇𝐨𝐭𝐚 𝐇𝐮 𝐉𝐚𝐛 𝐀𝐩𝐊𝐨 𝐇𝐚𝐒𝐭𝐚 𝐇𝐮𝐘𝐞 𝐃𝐞𝐊𝐡𝐭𝐚 𝐇𝐮☺️💐", threadID);
+     return api.sendMessage("💐𝐌𝐚𝐢 𝐀𝐡𝐡𝐚 𝐇𝐮 𝐌𝐞𝐫𝐢 𝐉𝐚𝐚𝐧 𝐀𝐚𝐩 𝐛𝐭𝐚𝐨☺️💐", threadID);
    };
 
    if ((event.body.toLowerCase() == "ka hua") || (event.body.toLowerCase() == "kya hua jii")) {
@@ -187,7 +187,7 @@ if ((event.body.toLowerCase() == "aaryan") || (event.body.toLowerCase() == "arya
           ${rand} 🤣🍁❤
 
 
-           *★᭄𝗢𝘄𝗻𝗲𝗿 ཫ༄𒁍≛⃝𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧🍒`
+       *★᭄𝗢𝘄𝗻𝗲𝗿 ཫ༄𒁍≛⃝𝐀𝐚𝐫𝐲𝐚𝐧 𝐒𝐡𝐚𝐫𝐚𝐛𝐢☘️`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
