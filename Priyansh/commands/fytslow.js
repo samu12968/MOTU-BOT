@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "fyt",
+    name: "fytslow",
     version: "1.0.0",
     hasPermssion: 2,
     credits: "... - Long LTD",
@@ -16,7 +16,7 @@ module.exports.config = {
 module.exports.run = async function({ api, args, Users, event}) {
   var say = args.join(" ")
    var n = say
-  let r = 600;
+  let r = 6000;
   
 
  //let diff = 400;
@@ -512,7 +512,7 @@ setTimeout(() => {a({body: `${n} TERI MAA 9 MAHINA KI GYAVHAN HO CHUKI H SBKE LU
 setTimeout(() => {a({body: `${n} TERI MAA KI CHUT VO BHI FATI HUI VO BHI PURE MUHALLE K LUND SE`})}, 70*r);
 
 
-setTimeout(() => {a({body: `${n} BAAP TO BAAP RAHEGA BETA JOR LAGA LE TU KITNI TERI GAND ME DUM HAI HAI AUQAT BANA FIR AANA JHANT KE BAL🤣 `})}, 71*r);
+setTimeout(() => {a({body: `${n} GANDU TERI GAND FAT JAEGI BSDK MADHARCHOD KUTIA K PILLE`})}, 71*r);
 
   
 
@@ -523,4 +523,4 @@ setTimeout(() => {a({body: `${n} BAAP TO BAAP RAHEGA BETA JOR LAGA LE TU KITNI T
 
   
  // }
-}
+  }

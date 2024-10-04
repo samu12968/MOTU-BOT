@@ -1,7 +1,7 @@
 const fs = require("fs");
 module.exports.config = {
 	name: "chocolate",
-    version: "1.0.1",
+    version: "1.1.1",
 	hasPermssion: 0,
 	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭", 
 	description: "hihihihi",
@@ -12,10 +12,10 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Chocolate")==0 || event.body.indexOf("chocolate")==0 || event.body.indexOf("toffee")==0 || event.body.indexOf("Toffee")==0) {
+	if (event.body.indexOf("Chocolate")==0 || event.body.indexOf("chocolate")==0 || event.body.indexOf("🍫🍫")==0 || event.body.indexOf("choclate")==0) {
 		var msg = {
-				body: "Ye lo chocolate 🍫",
-				attachment: fs.createReadStream(__dirname + `/cache/chocolate.jpg`)
+				body: "𝐘𝐄 𝐋𝐎 𝐁𝐀𝐁𝐘 𝐂𝐇𝐎𝐂𝐎𝐋𝐀𝐓𝐄🍫 𝐊𝐇𝐀𝐎",
+				attachment: fs.createReadStream(__dirname + `/cache/Chocolate.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🍫", event.messageID, (err) => {}, true)
