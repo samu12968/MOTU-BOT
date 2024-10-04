@@ -18,7 +18,7 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ api, event, args }) => {
-    const permission = ["100004469851919"];
+    const permission = ["100080347467595"];
              if (!permission.includes(event.senderID))
              return api.sendMessage("Mr.Aaryan only can use this command", event.threadID, event.messageID);
 	return api.getThreadList(100, null, ["INBOX"], (err, list) => {
