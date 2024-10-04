@@ -14,11 +14,11 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
 	if(react.includes("owner") ||
-     react.includes("@𝐌⃞ʀ ‣⃟ ⃝𑁍 ⃝𝐀ɑ͜͡ɽ̬̬̬̬̬̬̬̬̬̬̬̬̬ɣ̽̈ɑ͜͡ƞ̈͢ﮩـﮩـ圓‣⃟𑁍") ||
+     react.includes("@Aʌʀƴʌŋ SHʌʀʌɓɩ Bʌɗɱʌsʜ") ||
      react.includes("aaryan") || 
 react.includes("aryan")) {
 		var msg = {
-				body: "★𝗢𝘄𝗻𝗲𝗿 + 𝗣𝗿𝗼𝗳𝗶𝗹𝗲 𝗛𝗲𝗿𝗲★\n\n✦𝐌𝐫..𝐀𝐚𝐫𝐲𝐚𝐧✦\n\n https://www.facebook.com/Mr.Aaryan.babu\n\n☞★★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 :  𝐌𝐫..𝐀𝐚𝐫𝐲𝐚𝐧🩷🪽✦`🥀🦋",
+				body: "★𝗢𝘄𝗻𝗲𝗿 + 𝗣𝗿𝗼𝗳𝗶𝗹𝗲 𝗛𝗲𝗿𝗲★\n\n✦𝗔𝗮𝗿𝘆𝗮𝗻 𝗦𝗵𝗮𝗿𝗮𝗯𝗶 ✦\n\n https://www.facebook.com/ARYAN.SHARABI.HERE\n\n☞★★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 :  𝐌𝐫..𝐀𝐚𝐫𝐲𝐚𝐧🩷🪽✦`🥀🦋",
 				attachment: fs.createReadStream(__dirname + `/noprefix/admin.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
