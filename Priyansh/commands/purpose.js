@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "purpose",
+  name: "purpose2",
   version: "1.0.0", 
   hasPermssion: 0,
   credits: "PREM BABU",
