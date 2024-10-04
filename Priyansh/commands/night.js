@@ -1,26 +1,24 @@
-const fs = require("fs");
 module.exports.config = {
-	name: "night",
-    version: "1.0.1",
-	hasPermssion: 0,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭", 
-	description: "hihihihi",
-	commandCategory: "no prefix",
-	usages: "night",
+  name: "night2",
+  version: "7.3.1",
+  hasPermssion: 0,
+  credits: "John Lester", 
+  description: "Just Respond",
+  commandCategory: "no prefix",
     cooldowns: 5, 
 };
 
-module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
-	var { threadID, messageID } = event;
-	if (event.body.indexOf("Good night")==0 || event.body.indexOf("good night")==0 || event.body.indexOf("Gud night")==0 || event.body.indexOf("Gud nini")==0) {
-		var msg = {
-				body: "Good night 🌉✨ Bye tc 💫🥀 Sweet dreams 😴",
-				attachment: fs.createReadStream(__dirname + `/cache/night.jpg`)
-			}
-			api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("😴", event.messageID, (err) => {}, true)
-		}
-	}
-	module.exports.run = function({ api, event, client, __GLOBAL }) {
+module.exports.handleEvent = async function({ api, event, client, Users, __GLOBAL }) {
+  var { threadID, messageID } = event;
+  var name = await Users.getNameUser(event.senderID);
+  if (event.body.indexOf("good night")==0 || event.body.indexOf("Good Night")==0 || event.body.indexOf("gn")==0 || event.body.indexOf("Gn")==0 || event.body.indexOf("GN")==0 || event.body.indexOf("GOOD NIGHT")==0 || event.body.indexOf("Good night")==0 || event.body.indexOf("Magandang dabi")==0 || event.body.indexOf("magandang dabi")==0 || event.body.indexOf("Magandang dabi")==0 ) { 
+    var msg = {
+        body: ` ${name} Good ninght babu take care 😍 ❤️`
+      }
+      api.sendMessage(msg, threadID, messageID);
+    api.setMessageReaction("❤️", event.messageID, (err) => {}, true)
+    }
+  }
+  module.exports.run = function({ api, event, client, __GLOBAL }) {
 
   }
