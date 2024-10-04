@@ -1,11 +1,11 @@
 module.exports.config = {
-    name: "married",
-    version: "3.1.1",
+    name: "loveyou",
+    version: "2.6.0",
     hasPermssion: 0,
     credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-    description: "married",
-    commandCategory: "img",
-    usages: "[@mention]",
+    description: "",
+    commandCategory: "Love",
+    usages: "[tag]",
     cooldowns: 5,
     dependencies: {
         "axios": "",
@@ -20,9 +20,9 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'married.png');
+    const path = resolve(__dirname, 'cache/canvas', 'love2.jpg');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.ibb.co/PjWvsBr/13bb9bb05e53ee24893940892b411ad2.png", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/JTvb5yc.png", path);
 }
 
 async function makeImage({ one, two }) {
@@ -32,27 +32,27 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let batgiam_img = await jimp.read(__root + "/married.png");
-    let pathImg = __root + `/batman${one}_${two}.png`;
+    let tromcho_img = await jimp.read(__root + "/love2.jpg");
+    let pathImg = __root + `/love2_${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
-    
+
     let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
     fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne, 'utf-8'));
-    
+
     let getAvatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
     fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo, 'utf-8'));
-    
+
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(150, 150), 280, 45).composite(circleTwo.resize(150, 150), 130, 90);
-    
-    let raw = await batgiam_img.getBufferAsync("image/png");
-    
+    tromcho_img.composite(circleOne.resize(270, 270), 800, 100).composite(circleTwo.resize(300, 300), 205, 300);
+
+    let raw = await tromcho_img.getBufferAsync("image/png");
+
     fs.writeFileSync(pathImg, raw);
     fs.unlinkSync(avatarOne);
     fs.unlinkSync(avatarTwo);
-    
+
     return pathImg;
 }
 async function circle(image) {
@@ -62,13 +62,19 @@ async function circle(image) {
     return await image.getBufferAsync("image/png");
 }
 
-module.exports.run = async function ({ event, api, args }) {    
+module.exports.run = async function ({ event, api, args }) {
     const fs = global.nodemodule["fs-extra"];
     const { threadID, messageID, senderID } = event;
-    const mention = Object.keys(event.mentions);
-    if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
+    var mention = Object.keys(event.mentions)[0]
+    let tag = event.mentions[mention].replace("@", "");
+    if (!mention) return api.sendMessage("Please tag 1 person", threadID, messageID);
     else {
-        const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        var one = senderID, two = mention;
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "𝐇𝐄𝐋𝐋𝐎  "  +  tag + '𝐁𝐀𝐁𝐘 𝐈 𝐋𝐎𝐕𝐄 𝐘𝐎𝐔 𝐒𝐎 𝐌𝐔𝐂𝐇 𝐁𝐀𝐁𝐔😘👈🏻💔',
+            mentions: [{
+          tag: tag,
+          id: mention
+        }],
+     attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
-      }
+}

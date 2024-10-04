@@ -1,9 +1,9 @@
 module.exports.config = {
-    name: "married",
-    version: "3.1.1",
+    name: "kissv3",
+    version: "7.3.1",
     hasPermssion: 0,
-    credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-    description: "married",
+    credits: "John Lester",
+    description: "kiss",
     commandCategory: "img",
     usages: "[@mention]",
     cooldowns: 5,
@@ -20,9 +20,9 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'married.png');
+    const path = resolve(__dirname, 'cache/canvas', 'kissv3.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.ibb.co/PjWvsBr/13bb9bb05e53ee24893940892b411ad2.png", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/3laJwc1.jpg", path);
 }
 
 async function makeImage({ one, two }) {
@@ -32,7 +32,7 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let batgiam_img = await jimp.read(__root + "/married.png");
+    let batgiam_img = await jimp.read(__root + "/kissv3.png");
     let pathImg = __root + `/batman${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
     
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(150, 150), 280, 45).composite(circleTwo.resize(150, 150), 130, 90);
+    batgiam_img.composite(circleOne.resize(350, 350), 200, 300).composite(circleTwo.resize(350, 350), 600, 80);
     
     let raw = await batgiam_img.getBufferAsync("image/png");
     
@@ -71,4 +71,4 @@ module.exports.run = async function ({ event, api, args }) {
         const one = senderID, two = mention[0];
         return makeImage({ one, two }).then(path => api.sendMessage({ body: "", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
-      }
+}
