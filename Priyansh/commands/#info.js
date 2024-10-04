@@ -30,9 +30,9 @@ var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ �
 
 ☄️Bot Name︎︎︎☄️  ${global.config.BOTNAME}
 
-🔥Bot Admin🔥☞︎︎︎𝐌𝐑..𝐀𝐀𝐑𝐘𝐀𝐍 🤩☜︎︎︎✰💔🥀
+🔥Bot Admin🔥☞︎︎︎𝐀𝐀𝐑𝐘𝐀𝐍 𝐒𝐇𝐀𝐑𝐀𝐁𝐈 ☜︎︎︎✰🎁
 
-🙈bot andmin owner facebook id link🙈👇🏻\n https://www.facebook.com/Mr.Aaryan.babu\n
+🙈bot andmin owner facebook id link🙈👇🏻\n https://www.facebook.com/ARYAN.SHARABI.HERE\n
 
 👋For Any Kind Of Help Contact On whatsapp 👇🏻\n
 +91 9664945791😇
