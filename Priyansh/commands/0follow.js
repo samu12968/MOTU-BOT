@@ -12,9 +12,9 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Follow")==0 || event.body.indexOf("follow")==0 || event.body.indexOf("Nawaz")==0 || event.body.indexOf("nawaz")==0) {
+	if (event.body.indexOf("Follow")==0 || event.body.indexOf("follow")==0 || event.body.indexOf("insta")==0 || event.body.indexOf("Insta")==0) {
 		var msg = {
-				body: "👋For Any Kind Of Help Contact On Instagram Username 👉 @itz_nawaz__007😇",
+				body: "👋For Any Kind Of Help Contact On Instagram Username 👉 @aaryan_maurya_99",
 				attachment: fs.createReadStream(__dirname + `/noprefix/follow.mp3`)
 			}
 			api.sendMessage(msg, threadID, messageID);
