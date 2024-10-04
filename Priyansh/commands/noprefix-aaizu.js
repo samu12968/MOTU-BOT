@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	if (event.body.indexOf("")==0 || event.body.indexOf("")==0 || event.body.indexOf("")==0) {
 		var msg = {
 				body: "🤟🤘चिन टपाक डम डम 🤟🤘",
-				attachment: fs.createReadStream(__dirname + `/cache/chin.gif`)
+				attachment: fs.createReadStream(__dirname + `/cache/chin.webp`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😋", event.messageID, (err) => {}, true)
