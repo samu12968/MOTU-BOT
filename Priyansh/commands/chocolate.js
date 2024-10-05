@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	if (event.body.indexOf("Chocolate")==0 || event.body.indexOf("chocolate")==0 || event.body.indexOf("🍫🍫")==0 || event.body.indexOf("choclate")==0) {
 		var msg = {
 				body: "𝐘𝐄 𝐋𝐎 𝐁𝐀𝐁𝐘 𝐂𝐇𝐎𝐂𝐎𝐋𝐀𝐓𝐄🍫 𝐊𝐇𝐀𝐎",
-				attachment: fs.createReadStream(__dirname + `/cache/Chocolate.jpg`)
+				attachment: fs.createReadStream(__dirname + `/cache/chocolate.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🍫", event.messageID, (err) => {}, true)
